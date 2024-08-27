@@ -20,7 +20,7 @@ services:
     image: nginx:1.27
     restart: unless-stopped
     healthcheck:
-      test: [ "CMD-SHELL", "curl --fail http://localhost:80/ || exit 1" ]
+      test: [ "CMD-SHELL", "curl --fail http://localhost:80/health || exit 1" ]
       interval: 5s
       retries: 10
       start_period: 15s
